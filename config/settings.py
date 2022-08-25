@@ -53,9 +53,8 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True,  # App에서 템플릿 소스 파일을 찾아야 하는지 여부
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
