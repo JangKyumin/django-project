@@ -119,10 +119,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Static 파일 경로를 지정해야 인식함
 STATICFILES_DIRS = [
     "/Users/kmjang/dev/django-project/static",
 ]
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
