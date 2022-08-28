@@ -15,11 +15,19 @@ class Question(models.Model):
     @admin.display(
         boolean=True,
         ordering='pub_date',
-        description="Publishec recently",
+        description="Published recently",
     )
     def was_published_recently(self):
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
+
+    @admin.display(
+        boolean=False,
+        ordering='question_text',
+        description="question_text order",
+    )
+    def was_question_text_ordering(self):
+        return self.question_text
 
 
 class Choice(models.Model):
