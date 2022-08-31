@@ -19,5 +19,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
-    path('', include('drf_quickstart.urls')),   # 루트 경로로 지정
+    path('', include('drf_quickstart.urls')),  # 루트 경로로 지정
+    path('snippets/', include('snippets.urls')),  # 직렬화 관련 url
 ]

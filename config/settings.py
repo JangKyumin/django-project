@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',   # drf App 사용 등록
+    'snippets',
 ]
 
 MIDDLEWARE = [
