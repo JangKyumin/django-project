@@ -8,7 +8,7 @@ from snippets.serializers import SnippetSerializer, UserSerializer
 
 '''
 @api_view : function 베이스로 적용 가능함, APIView 하위 클래스로 설정된 속성에 해당됨
-APIView : class 베이스로 상속하여 적용 가능함
+APIView : class 베이스로 상속하여 적용 가능함, 리턴 타입에 따른 제네릭이 정의되어 사용하기 편하다. 단 orm일 경우에만 가능함 
 '''
 
 
