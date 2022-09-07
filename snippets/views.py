@@ -3,10 +3,9 @@ from rest_framework import permissions
 from rest_framework import renderers
 from rest_framework import viewsets
 from rest_framework.decorators import action
-from rest_framework.decorators import api_view, throttle_classes
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from rest_framework.throttling import UserRateThrottle
 
 from snippets.models import Snippet
 from snippets.permissions import IsOwnerOrReadOnly
@@ -18,11 +17,14 @@ APIView : class 베이스로 상속하여 적용 가능함, 리턴 타입에 따
 '''
 
 
-class OncePerDayUserThrottle(UserRateThrottle):
-    rate = '1/day'
+# 하루에 한번반 호출 하도록 처리 가능함
+# from rest_framework.decorators import throttle_classes
+# from rest_framework.throttling import UserRateThrottle
+# class OncePerDayUserThrottle(UserRateThrottle):
+#     rate = '1/day'
+# @throttle_classes([OncePerDayUserThrottle])
 
 
-@throttle_classes([OncePerDayUserThrottle])
 class SnippetViewSet(viewsets.ModelViewSet):
     """
     This viewset automatically provides `list`, `create`, `retrieve`,
