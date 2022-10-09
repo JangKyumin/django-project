@@ -6,3 +6,4 @@ This project is a space for studying django and drf.
 - Model
 - Serializers
 - Permissions
+- class APIView
