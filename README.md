@@ -7,3 +7,4 @@ This project is a space for studying django and drf.
 - Serializers
 - Permissions
 - class APIView
+- ORM 프로세스
